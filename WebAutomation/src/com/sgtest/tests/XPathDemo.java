@@ -25,7 +25,11 @@ public class XPathDemo {
 	//	relativeXPathUsingTagNameWithAttributeName();
 	//	relativeXPathUsingTagNameWithAttributeName_01();
 	//	relativeXPathUsingTagNameWithAttributeName_02();
-		relativeXPathUsingTagNameWithAttributeName_03();
+	//	relativeXPathUsingTagNameWithAttributeName_03();
+	//	partialMatchingOfAttributeValue();
+	//	relativeXPathBasedOnTextContent();
+	//	relativeXPathBasedOnPartialMatchingOfTextContent();
+		endsWithApproach();
 	}
 
 	private static void launchBrowser()
@@ -207,6 +211,52 @@ public class XPathDemo {
 	 */
 	private static void partialMatchingOfAttributeValue()
 	{
-		
+	//	oBrowser.findElement(By.xpath("//input[starts-with(@id, 'btn1')]")).click();
+	//	oBrowser.findElement(By.xpath("//input[contains(@id, 'submit')]")).click();
+		oBrowser.findElement(By.xpath("//input[ends-with(@id, 'button1')]")).click();
+	}
+	
+	/**
+	 * case 11: based on text content
+	 * Syntax:
+	 *  //<tagName>[text()='content']
+	 */
+	private static void relativeXPathBasedOnTextContent()
+	{
+		oBrowser.findElement(By.xpath("//a[text()='S G Software Testing']")).click();
+	}
+	
+	/**
+	 * case 12: based on partial matching of text content
+	 *  starts-with(text(),'content');
+	 *  ends-with(text(),'content');
+	 *  contains(text(),'content');
+	 * Syntax:
+	 *  //<tagName>[starts-with(text(),'content')]
+	 *  //<tagName>[ends-with(text(),'content')]
+	 *  //<tagName>[contains(text(),'content')]
+	 */
+	private static void relativeXPathBasedOnPartialMatchingOfTextContent()
+	{
+	//	oBrowser.findElement(By.xpath("//a[starts-with(text(),'Software')]")).click();
+		oBrowser.findElement(By.xpath("//a[contains(text(),'Software')]")).click();
+	}
+	
+	/**
+	 *  We are aware that in partial matching ends-with never work in selenium
+	 *  but by using ends with functionality identify the Element
+	 */
+	private static void endsWithApproach()
+	{
+		List<WebElement> oLinks=oBrowser.findElements(By.xpath("//a[@href]"));
+		for(int i=0;i<oLinks.size();i++)
+		{
+			WebElement link=oLinks.get(i);
+			if(link.getText().endsWith("Testing"))
+			{
+				link.click();
+				break;
+			}
+		}
 	}
 }
