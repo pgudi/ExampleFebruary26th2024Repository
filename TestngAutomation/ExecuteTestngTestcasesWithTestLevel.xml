@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Unit test cases">
+	<test name="Users">
+		<packages>
+			<package name="com.sgtesting.users"></package>
+		</packages>
+	</test>
+	<test name="Products">
+		<classes>
+			<class name="com.sgtesting.products.Products"></class>
+		</classes>
+	</test>
+</suite>
