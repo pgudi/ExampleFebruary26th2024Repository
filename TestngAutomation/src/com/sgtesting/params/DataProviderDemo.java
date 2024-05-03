@@ -20,5 +20,4 @@ public class DataProviderDemo {
 			{"user3","welcome3"}
 		};
 	}
-
 }
