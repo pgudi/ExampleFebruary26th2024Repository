@@ -3,6 +3,7 @@
 	<test name="Unit Tests">
 		<classes>
 			<class name="com.sgtesting.prototype.testscenarios.LoginLogoutScenario"></class>
+			<class name="com.sgtesting.prototype.testscenarios.LoginScenario"></class>
 		</classes>
 	</test>
 </suite>
