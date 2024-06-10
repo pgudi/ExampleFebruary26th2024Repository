@@ -19,6 +19,8 @@ import io.cucumber.java.en.When;
 public class StepDefinitions {
 	public static WebDriver oBrowser=null;
 	public static ActiTimePage oPage=null;
+	public static String firstname1=null;
+	public static String lastname1=null;
 	public Logger log=LogManager.getLogger("BDD Automation");
 	/**
 	 * Author:
@@ -43,13 +45,13 @@ public class StepDefinitions {
 	 * Author:
 	 * Step Name:I navigate url of the application
 	 */
-	@And("^I navigate url of the application$")
-	public void I_navigate_url_of_the_application()
+	@And("^I navigate (.*) of the application$")
+	public void I_navigate_url_of_the_application(String url)
 	{
 		log.info("Execution of method  I_navigate_url_of_the_application has started here..");
 		try
 		{
-			oBrowser.get("http://localhost/login.do");
+			oBrowser.get(url);
 			Thread.sleep(5000);
 		}catch (Exception e) 
 		{
@@ -62,13 +64,13 @@ public class StepDefinitions {
 	 * Author:
 	 * Step Name:I enter username in username text field
 	 */
-	@When("^I enter username in username text field$")
-	public void I_enter_username_in_username_text_field()
+	@When("^I enter username in (.*) text field$")
+	public void I_enter_username_in_username_text_field(String username)
 	{
 		log.info("Execution of method  I_enter_username_in_username_text_field has started here..");
 		try
 		{
-			oPage.getUserName().sendKeys("admin");
+			oPage.getUserName().sendKeys(username);
 		}catch (Exception e) 
 		{
 			log.error("There is an exception araised during the execution of Method I_enter_username_in_username_text_field, Exception :"+e);
@@ -80,13 +82,13 @@ public class StepDefinitions {
 	 * Author:
 	 * Step Name:I enter password in password text field
 	 */
-	@And("^I enter password in password text field$")
-	public void I_enter_password_in_password_text_field()
+	@And("^I enter password in (.*) text field$")
+	public void I_enter_password_in_password_text_field(String password)
 	{
 		try
 		{
 			log.info("Execution of method  I_enter_password_in_password_text_field has started here..");
-			oPage.getPasword().sendKeys("manager");
+			oPage.getPasword().sendKeys(password);
 		}catch (Exception e) 
 		{
 			log.error("There is an exception araised during the execution of Method I_enter_password_in_password_text_field, Exception :"+e);
@@ -251,13 +253,14 @@ public class StepDefinitions {
 	 * Author:
 	 * Step Name: I enter firstName in firstName text field
 	 */
-	@And("^I enter firstName in firstName text field$")
-	public void I_enter_firstName_in_firstName_text_field()
+	@And("^I enter firstName in (.*) text field$")
+	public void I_enter_firstName_in_firstName_text_field(String firstname)
 	{
 		try
 		{
 			log.info("Execution of method  I_enter_firstName_in_firstName_text_field has started here..");
-			oPage.getUserFirstName().sendKeys("demo");
+			firstname1=firstname;
+			oPage.getUserFirstName().sendKeys(firstname);
 		}catch (Exception e) 
 		{
 			log.error("There is an exception araised during the execution of Method I_enter_firstName_in_firstName_text_field, Exception :"+e);
@@ -269,13 +272,14 @@ public class StepDefinitions {
 	 * Author:
 	 * Step Name: I enter lastName in lastName text field
 	 */
-	@And("^I enter lastName in lastName text field$")
-	public void I_enter_lastName_in_lastName_text_field()
+	@And("^I enter lastName in (.*) text field$")
+	public void I_enter_lastName_in_lastName_text_field(String lastName)
 	{
 		try
 		{
 			log.info("Execution of method  I_enter_lastName_in_lastName_text_field has started here..");
-			oPage.getUserLastName().sendKeys("User1");
+			lastname1=lastName;
+			oPage.getUserLastName().sendKeys(lastName);
 		}catch (Exception e) 
 		{
 			log.error("There is an exception araised during the execution of Method I_enter_lastName_in_lastName_text_field, Exception :"+e);
@@ -287,13 +291,13 @@ public class StepDefinitions {
 	 * Author:
 	 * Step Name: I enter email in email text field
 	 */
-	@And("^I enter email in email text field$")
-	public void I_enter_email_in_email_text_field()
+	@And("^I enter email in (.*) text field$")
+	public void I_enter_email_in_email_text_field(String email)
 	{
 		try
 		{
 			log.info("Execution of method  I_enter_email_in_email_text_field has started here..");
-			oPage.getUserEmailId().sendKeys("demo@gmail.com");
+			oPage.getUserEmailId().sendKeys(email);
 		}catch (Exception e) 
 		{
 			log.error("There is an exception araised during the execution of Method I_enter_email_in_email_text_field, Exception :"+e);
@@ -305,13 +309,13 @@ public class StepDefinitions {
 	 * Author:
 	 * Step Name: I enter username in username text field of user page
 	 */
-	@And("^I enter username in username text field of user page$")
-	public void I_enter_username_in_username_text_field_of_user_page()
+	@And("^I enter username in (.*) text field of user page$")
+	public void I_enter_username_in_username_text_field_of_user_page(String username)
 	{
 		try
 		{
 			log.info("Execution of method  I_enter_username_in_username_text_field_of_user_page has started here..");
-			oPage.getUserName().sendKeys("DemoUser1");
+			oPage.getUserName().sendKeys(username);
 		}catch (Exception e) 
 		{
 			log.error("There is an exception araised during the execution of Method I_enter_username_in_username_text_field_of_user_page, Exception :"+e);
@@ -324,13 +328,13 @@ public class StepDefinitions {
 	 * Author:
 	 * Step Name: I enter password in password text field of user page
 	 */
-	@And("^I enter password in password text field of user page$")
-	public void I_enter_password_in_password_text_field_of_user_page()
+	@And("^I enter password in (.*) text field of user page$")
+	public void I_enter_password_in_password_text_field_of_user_page(String password)
 	{
 		try
 		{
 			log.info("Execution of method  I_enter_password_in_password_text_field_of_user_page has started here..");
-			oPage.getUserPassword().sendKeys("welcome1");
+			oPage.getUserPassword().sendKeys(password);
 		}catch (Exception e) 
 		{
 			log.error("There is an exception araised during the execution of Method I_enter_password_in_password_text_field_of_user_page, Exception :"+e);
@@ -343,13 +347,13 @@ public class StepDefinitions {
 	 * Author:
 	 * Step Name: I enter retype password in password text field of user page
 	 */
-	@And("^I enter retype password in password text field of user page$")
-	public void I_enter_retype_password_in_password_text_field_of_user_page()
+	@And("^I enter retype password in (.*) text field of user page$")
+	public void I_enter_retype_password_in_password_text_field_of_user_page(String retypepassword)
 	{
 		try
 		{
 			log.info("Execution of method  I_enter_retype_password_in_password_text_field_of_user_page has started here..");
-			oPage.getUserRetypePassword().sendKeys("welcome1");
+			oPage.getUserRetypePassword().sendKeys(retypepassword);
 		}catch (Exception e) 
 		{
 			log.error("There is an exception araised during the execution of Method I_enter_retype_password_in_password_text_field_of_user_page, Exception :"+e);
@@ -408,7 +412,8 @@ public class StepDefinitions {
 		try
 		{
 			log.info("Execution of method  I_click_on_existing_user_in_the_user_list_page has started here..");
-			oPage.getExistingUser().click();
+			String username = lastname1+", "+firstname1;
+			oBrowser.findElement(By.xpath("(//span[text()='"+username+"'])[1]")).click();		
 			Thread.sleep(2000);
 		}catch (Exception e) 
 		{

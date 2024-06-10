@@ -7,7 +7,8 @@ import io.cucumber.testng.CucumberOptions;
 		glue = "com.sgtesting.actitime.stepdefinitions",
 		plugin = {"pretty",
 				"html:Reports/cucumber-report.html",
-				"json:Reports/cucumber.json"}
+				"json:Reports/cucumber.json"},
+		tags = "@Execute"
 		)
 public class DriverScript extends AbstractTestNGCucumberTests{
 
