@@ -1,0 +1,12 @@
+{
+  "employeeFirstName": "Demo",
+  "employeeLastName": "User1",
+  "jobName": "Manager",
+  "emailId": "demo@gss.com",
+  "age": 33,
+  "contactNumber": 8090706050,
+  "salary": 12000,
+  "departmentName": "Accounting",
+  "cityName": "Bangalore",
+  "address": "1st Cross,4th Block, Attiguppe"
+}
