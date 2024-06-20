@@ -1,0 +1,67 @@
+[INFO ] 2024-06-20 11:41:34.324 [main] StepDefinitions - I provide Get Employee EndPoint
+[INFO ] 2024-06-20 11:41:34.693 [main] StepDefinitions - I create RequestSpecification object
+[INFO ] 2024-06-20 11:41:34.834 [main] StepDefinitions - I provide header for the request
+[INFO ] 2024-06-20 11:41:34.887 [main] StepDefinitions - I run the GET Http Method
+[ERROR] 2024-06-20 11:41:35.632 [main] StepDefinitions - there is a Error message has occured during execution of I_run_the_GET_Http_Method, Exception :java.net.ConnectException: Connection refused: connect
+[INFO ] 2024-06-20 11:41:35.633 [main] StepDefinitions - I get the status code as 200
+[ERROR] 2024-06-20 11:41:35.633 [main] StepDefinitions - there is a Error message has occured during execution of I_get_the_status_code_as_200, Exception :java.lang.NullPointerException: Cannot invoke "io.restassured.response.Response.getStatusCode()" because "com.sgtesting.employee.stepdefinitions.StepDefinitions.response" is null
+[INFO ] 2024-06-20 11:41:35.653 [main] StepDefinitions - I provide Get Employee Request EndPoint
+[INFO ] 2024-06-20 11:41:35.654 [main] StepDefinitions - I create RequestSpecification object
+[INFO ] 2024-06-20 11:41:35.655 [main] StepDefinitions - I provide header for the request
+[INFO ] 2024-06-20 11:41:35.656 [main] StepDefinitions - I run the GET Http Method
+[INFO ] 2024-06-20 11:41:36.516 [main] StepDefinitions - {
+    "id": 4,
+    "employeeFirstName": "Suman",
+    "employeeLastName": "Suman",
+    "jobName": "strSoftwae Test Engineer",
+    "emailId": "suman@gss.com",
+    "age": 21,
+    "contactNumber": 9010234567,
+    "salary": 32000.0,
+    "departmentName": "Software",
+    "cityName": "Bangalore",
+    "address": "Rajajinagar Bangalore",
+    "createdAt": "2024-06-18T05:08:45.901+00:00",
+    "updatedAt": "2024-06-18T05:08:45.901+00:00"
+}
+[INFO ] 2024-06-20 11:41:36.517 [main] StepDefinitions - I get the status code as 200
+[INFO ] 2024-06-20 11:41:36.529 [main] StepDefinitions - I provide Get Employee Request EndPoint
+[INFO ] 2024-06-20 11:41:36.531 [main] StepDefinitions - I create RequestSpecification object
+[INFO ] 2024-06-20 11:41:36.532 [main] StepDefinitions - I provide header for the request
+[INFO ] 2024-06-20 11:41:36.533 [main] StepDefinitions - I run the GET Http Method
+[INFO ] 2024-06-20 11:41:36.561 [main] StepDefinitions - {
+    "id": 5,
+    "employeeFirstName": "Demo",
+    "employeeLastName": "User1",
+    "jobName": "Manager",
+    "emailId": "demo@gss.com",
+    "age": 33,
+    "contactNumber": 8090706050,
+    "salary": 12000.0,
+    "departmentName": "Accounting",
+    "cityName": "Bangalore",
+    "address": "1st Cross,4th Block, Attiguppe",
+    "createdAt": "2024-06-18T06:23:54.344+00:00",
+    "updatedAt": "2024-06-18T06:23:54.344+00:00"
+}
+[INFO ] 2024-06-20 11:41:36.563 [main] StepDefinitions - I get the status code as 200
+[INFO ] 2024-06-20 11:41:36.573 [main] StepDefinitions - I provide Get Employee Request EndPoint
+[INFO ] 2024-06-20 11:41:36.575 [main] StepDefinitions - I create RequestSpecification object
+[INFO ] 2024-06-20 11:41:36.578 [main] StepDefinitions - I provide header for the request
+[INFO ] 2024-06-20 11:41:36.580 [main] StepDefinitions - I run the GET Http Method
+[INFO ] 2024-06-20 11:41:36.616 [main] StepDefinitions - {
+    "id": 1,
+    "employeeFirstName": "Santosh",
+    "employeeLastName": "Bhaskar",
+    "jobName": "Software Engineer",
+    "emailId": "santosh@gss.com",
+    "age": 22,
+    "contactNumber": 9080102030,
+    "salary": 45000.0,
+    "departmentName": "Health",
+    "cityName": "Bangalore",
+    "address": "Neat Attiguppe Metro Station",
+    "createdAt": "2024-06-15T05:18:50.077+00:00",
+    "updatedAt": "2024-06-15T05:18:50.077+00:00"
+}
+[INFO ] 2024-06-20 11:41:36.617 [main] StepDefinitions - I get the status code as 200
