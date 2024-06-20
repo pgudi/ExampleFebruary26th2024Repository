@@ -1,5 +1,8 @@
 package com.sgtesting.actitime.stepdefinitions;
 
+import java.util.List;
+import java.util.Map;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -24,6 +28,7 @@ public class StepDefinitions {
 		try
 		{
 			oBrowser=new ChromeDriver();
+			oBrowser.manage().window().maximize();
 		}catch (Exception e) 
 		{
 			e.printStackTrace();
@@ -400,6 +405,41 @@ public class StepDefinitions {
 			Thread.sleep(2000);
 			oAlert.accept();
 			Thread.sleep(2000);
+		}catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Author:
+	 * Strp Name: I login and logout from application
+	 */
+	@When("^I login and logout from application$")
+	public void I_login_and_logout_from_application(DataTable data)
+	{
+		try
+		{
+			List<Map<String,String>> rows=data.asMaps(String.class, String.class);
+			int count=0;
+			for(Map<String,String> testdata: rows)
+			{
+				String user1=testdata.get("username");
+				String pwd1=testdata.get("password");
+				oBrowser.findElement(By.id("username")).sendKeys(user1);
+				oBrowser.findElement(By.name("pwd")).sendKeys(pwd1);
+				oBrowser.findElement(By.xpath("//*[@id='loginButton']/div")).click();
+				Thread.sleep(5000);
+				if(count==0)
+				{
+					oBrowser.findElement(By.id("gettingStartedShortcutsPanelId")).click();
+					Thread.sleep(2000);
+				}
+				count=count+1;
+				oBrowser.findElement(By.linkText("Logout")).click();
+				Thread.sleep(2000);
+			}
+			
 		}catch (Exception e) 
 		{
 			e.printStackTrace();

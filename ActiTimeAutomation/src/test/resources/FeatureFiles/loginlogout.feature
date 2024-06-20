@@ -5,7 +5,7 @@
 #Testcase Name:
 #Testcase Id:
 #Description:
-
+@Smoke
 Feature: Verify login and logout functionalities
 Scenario Outline: Verify login functionality
 Given I launch chrome Browser

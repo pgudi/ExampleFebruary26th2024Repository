@@ -5,7 +5,7 @@
 #Testcase Name:
 #Testcase Id:
 #Description:
-@Execute
+@Execute, @Run
 Feature: Verify create user functionalities
 Scenario Outline: Verify create user functionality
 Given I launch chrome Browser
