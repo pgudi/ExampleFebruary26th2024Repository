@@ -5,7 +5,9 @@
 #Testcase Name:
 #Testcase Id:
 #Description:
+
 Feature: Verify login and logout functionalities
+
 Scenario: Verify login functionality
 Given I launch chrome Browser
 And I navigate url of the application
@@ -21,3 +23,4 @@ Given I find the home page
 When I click on logout link
 Then I find the login page
 And I close chrome browser
+

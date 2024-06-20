@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 		plugin = {"pretty",
 				"html:Reports/cucumber-report.html",
 				"json:Reports/cucumber.json"},
-		tags = "@Execute"
+		tags = "@Execute,@Smoke"
 		)
 public class DriverScript extends AbstractTestNGCucumberTests{
 
